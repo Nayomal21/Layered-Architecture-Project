@@ -139,8 +139,7 @@ public class PlaceOrderFormController {
 //                        throw new NotFoundException("There is no such item associated with the id " + code);
                     }
 
-                    ItemDAOImpl placeOrderDAO = new ItemDAOImpl();
-                    ItemDTO item =   placeOrderDAO.findItem( newItemCode + "");
+                    ItemDTO item =   itemDAO.findItem( newItemCode + "");
 
 
 
@@ -228,6 +227,8 @@ public class PlaceOrderFormController {
     private void loadAllItemCodes() {
         try {
             /*Get all items*/
+
+
 
 
             ItemDAOImpl item = new ItemDAOImpl();
