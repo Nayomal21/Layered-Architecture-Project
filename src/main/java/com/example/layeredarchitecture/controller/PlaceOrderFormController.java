@@ -54,7 +54,7 @@ public class PlaceOrderFormController {
 
     OrderDAO orderDAO = new OrderDAOImpl();
     CustomerDAO customerDAO = new CustomerDAOImpl();
-
+    ItemDAOImpl itemDAO = new ItemDAOImpl();
 
     public PlaceOrderFormController() throws SQLException, ClassNotFoundException {
     }
@@ -187,7 +187,7 @@ public class PlaceOrderFormController {
     }
 
     private boolean existItem(String code) throws SQLException, ClassNotFoundException {
-        ItemDAOImpl itemDAO = new ItemDAOImpl();
+
        return itemDAO.isExists(code);
 
     }
@@ -347,5 +347,5 @@ public class PlaceOrderFormController {
         }
         return false;
     }
-    
+
 }
